@@ -58,6 +58,7 @@
     .nav {
       display: flex; align-items: center; justify-content: space-between;
       gap: 16px; min-height: 70px;
+      position: relative;
     }
 
     .brand {
@@ -134,7 +135,7 @@
 
     /* ── HERO ── */
     .hero {
-      padding: 48px 0 32px;
+      padding: 48px 0 24px;
       text-align: center;
     }
 
@@ -172,26 +173,163 @@
       display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
     }
 
-    .hero-stats {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 14px; margin-top: 36px;
+    /* ── STUDENT SHOWCASE ── */
+    .student-showcase {
+      padding-top: 8px;
+      padding-bottom: 10px;
     }
 
-    .stat-card {
-      background: white; border: var(--border); border-radius: 22px;
-      padding: 22px 16px; box-shadow: var(--shadow); text-align: center;
+    .showcase-shell {
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      padding: 34px 26px 28px;
+      background:
+        radial-gradient(circle at top right, rgba(242,106,46,0.18), transparent 22%),
+        radial-gradient(circle at bottom left, rgba(37,211,102,0.12), transparent 20%),
+        linear-gradient(135deg, #0b0a3d, #17138f 58%, #0d0a7c 100%);
+      box-shadow: 0 28px 56px rgba(13,10,124,0.22);
+      color: white;
     }
 
-    .stat-num {
-      font-size: 2rem; font-weight: 900; color: var(--navy);
-      line-height: 1; margin-bottom: 6px;
+    .showcase-shell::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      pointer-events: none;
     }
 
-    .stat-num.orange { color: var(--orange); }
-    .stat-num.green-c { color: var(--green-dark); }
+    .showcase-shell::after {
+      content: "";
+      position: absolute;
+      bottom: -70px;
+      right: -70px;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      pointer-events: none;
+    }
 
-    .stat-label {
-      font-size: 0.88rem; line-height: 1.5; color: var(--muted); font-weight: 700;
+    .showcase-head {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
+    .showcase-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.84rem;
+      font-weight: 900;
+      color: #fff2d2;
+    }
+
+    .showcase-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.08;
+      margin-bottom: 10px;
+      color: white;
+      letter-spacing: -0.03em;
+    }
+
+    .showcase-head p {
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .showcase-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 42px rgba(0,0,0,0.22);
+    }
+
+    .project-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #06061f;
+      overflow: hidden;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(12,10,70,0.78);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: white;
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+    }
+
+    .project-meta {
+      padding: 18px 16px 18px;
+    }
+
+    .project-title {
+      font-size: 1.02rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+      color: white;
+    }
+
+    .project-desc {
+      font-size: 0.91rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .showcase-note {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      text-align: center;
+      color: rgba(255,255,255,0.70);
+      font-size: 0.88rem;
+      font-weight: 700;
     }
 
     /* ── SECTIONS ── */
@@ -546,23 +684,6 @@
       50% { box-shadow: 0 16px 46px rgba(37,211,102,0.50); }
     }
 
-    /* ── MID CTA ── */
-    .mid-cta {
-      background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
-      border: 2px solid rgba(37,211,102,0.15);
-      border-radius: 24px; padding: 28px 24px;
-      text-align: center; box-shadow: var(--shadow);
-    }
-
-    .mid-cta h3 {
-      color: var(--navy); font-size: 1.35rem; margin-bottom: 8px;
-    }
-
-    .mid-cta p {
-      color: var(--muted); line-height: 1.7; margin-bottom: 16px;
-      max-width: 500px; margin-left: auto; margin-right: auto;
-    }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       .menu-toggle { display: inline-grid; place-items: center; }
@@ -578,7 +699,7 @@
       .nav-links a { padding: 13px 16px; border-radius: 14px; }
       .nav-links .btn { width: 100%; }
 
-      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .showcase-grid { grid-template-columns: 1fr; }
       .proof-grid { grid-template-columns: 1fr 1fr; }
       .adv-grid { grid-template-columns: 1fr 1fr; }
       .trust-strip { grid-template-columns: repeat(2, 1fr); }
@@ -589,10 +710,19 @@
 
     @media (max-width: 640px) {
       .container { width: min(100%, calc(100% - 20px)); }
-      .hero { padding: 32px 0 24px; }
+      .hero { padding: 32px 0 18px; }
       .hero h1 { font-size: clamp(2rem, 10vw, 3rem); }
-      .hero-stats { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; align-items: stretch; }
+
+      .showcase-shell {
+        padding: 26px 16px 20px;
+        border-radius: 24px;
+      }
+
+      .project-meta {
+        padding: 16px 14px 16px;
+      }
+
       .proof-grid { grid-template-columns: 1fr; }
       .adv-grid { grid-template-columns: 1fr; }
       .trust-strip { grid-template-columns: 1fr; }
@@ -659,21 +789,70 @@
             <a class="btn btn-ghost" href="#courses">View Courses</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- <div class="hero-stats">
-          <div class="stat-card">
-            <div class="stat-num orange">+28%</div>
-            <div class="stat-label">Higher salary for non-IT roles that list Python as a skill</div>
+    <!-- ═══ STUDENT SHOWCASE ═══ -->
+    <section class="student-showcase">
+      <div class="container">
+        <div class="showcase-shell">
+          <div class="showcase-head">
+            <div class="showcase-kicker">🚀 Student-built projects</div>
+            <h2>What our students built after taking the course.</h2>
+            <p>
+              "They don’t just learn code. They build things they’re proud of”
+            </p>
           </div>
-          <div class="stat-card">
-            <div class="stat-num">500+</div>
-            <div class="stat-label">Students trained by our founder across the UK</div>
+
+          <div class="showcase-grid">
+
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-badge">🧩 Beginner Logic</span>
+                <img src="assets/gif1.gif" alt="Student-built Python beginner project" />
+              </div>
+              <div class="project-meta">
+                <div class="project-title">First interactive Python program</div>
+                <!-- <div class="project-desc">
+                  A beginner-friendly project that turns coding concepts into something
+                  visual, rewarding, and easy to understand.
+                </div> -->
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-badge">🎮 Game Project</span>
+                <img src="assets/gif3.gif" alt="Student-built Flappy Bird style Python game" />
+              </div>
+              <div class="project-meta">
+                <div class="project-title">Arcade-style Python game</div>
+                <!-- <div class="project-desc">
+                  Students learn logic, collisions, scoring, and game loops by building
+                  something fun they can actually play.
+                </div> -->
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-badge">🌌 Creative Build</span>
+                <img src="assets/gif2.gif" alt="Student-built Python animation or game" />
+              </div>
+              <div class="project-meta">
+                <div class="project-title">Creative animation or mini game</div>
+                <!-- <div class="project-desc">
+                  Students combine movement, variables, and problem-solving to create
+                  projects that feel impressive even at an early stage.
+                </div> -->
+              </div>
+            </article>
           </div>
-          <div class="stat-card">
-            <div class="stat-num green-c">Max 8</div>
-            <div class="stat-label">Students per class for real attention &amp; interaction</div>
+
+          <div class="showcase-note">
+            Real examples of what students can build during their learning journey.
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
 
@@ -727,11 +906,6 @@
             <h3>500+ students trained in the UK</h3>
             <p>Our founder brings real teaching experience, previously training 500+ individuals in the UK.</p>
           </div>
-          <!-- <div class="adv-card">
-            <div class="adv-icon" style="background:var(--yellow);">👥</div>
-            <h3>Max 8 students per class</h3>
-            <p>Small classes mean every student gets attention, can ask questions, and actually learns - not just watches.</p>
-          </div> -->
           <div class="adv-card">
             <div class="adv-icon" style="background:#ffe0d2;">🤖</div>
             <h3>AI-powered learning</h3>
@@ -742,11 +916,6 @@
             <h3>Python - the world's #1 language</h3>
             <p>Python is the most popular programming language globally and the backbone of AI, data science, and automation.</p>
           </div>
-          <!-- <div class="adv-card">
-            <div class="adv-icon" style="background:#fce4ec;">🎯</div>
-            <h3>Age-tailored curriculum</h3>
-            <p>Pace, examples, and projects are all adapted to the age group - from 10-year-olds to working adults.</p>
-          </div> -->
         </div>
       </div>
     </section>
@@ -760,11 +929,6 @@
             <strong>100% Online</strong>
             <span>Join from anywhere with a laptop or tablet</span>
           </div>
-          <!-- <div class="trust-item">
-            <div class="emoji">🎓</div>
-            <strong>UK-trained educator</strong>
-            <span>Real classroom experience, not just self-taught</span>
-          </div> -->
           <div class="trust-item">
             <div class="emoji">👥</div>
             <strong>Small classes</strong>
@@ -778,17 +942,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ═══ MID CTA ═══ -->
-    <!-- <section>
-      <div class="container">
-        <div class="mid-cta">
-          <h3>Curious which course is right for your child?</h3>
-          <p>Message us on WhatsApp - we'll recommend the best track based on age and experience level.</p>
-          <a class="btn btn-whatsapp" href="https://wa.me/601153238181?text=Hi%20codeSmart%2C%20which%20course%20is%20right%20for%20my%20child%3F" target="_blank" rel="noopener">💬 Ask Us on WhatsApp</a>
-        </div>
-      </div>
-    </section> -->
 
     <!-- ═══ COURSES ═══ -->
     <section id="courses">
@@ -814,10 +967,6 @@
               <li><span class="check">✓</span> Learn to use AI tools for faster coding &amp; learning</li>
               <li><span class="check">✓</span> Small class - every student gets real attention</li>
             </ul>
-
-            <!-- <div class="course-cta">
-              <a class="btn btn-whatsapp" href="https://wa.me/601153238181?text=Hi%20codeSmart%2C%20I%E2%80%99m%20interested%20in%20the%2010-week%20Young%20Learner%20Python%20course." target="_blank" rel="noopener" style="width:100%;">💬 Enquire - Young Learner Track</a>
-            </div> -->
           </article>
 
           <article class="course-card">
@@ -835,10 +984,6 @@
               <li><span class="check">✓</span> Learn to leverage AI to code faster &amp; smarter</li>
               <li><span class="check">✓</span> Great for students, professionals &amp; career changers</li>
             </ul>
-
-            <!-- <div class="course-cta">
-              <a class="btn btn-whatsapp" href="https://wa.me/601153238181?text=Hi%20codeSmart%2C%20I%E2%80%99m%20interested%20in%20the%2012-week%20Core%20Python%20course." target="_blank" rel="noopener" style="width:100%;">💬 Enquire - Core Python Track</a>
-            </div> -->
           </article>
         </div>
       </div>
@@ -998,7 +1143,6 @@
       });
     });
 
-    // Simple scroll-triggered fade-in
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
