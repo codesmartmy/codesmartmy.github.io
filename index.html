@@ -49,61 +49,99 @@
 
     /* ── NAV ── */
     header {
-      position: sticky; top: 0; z-index: 60;
+      position: sticky;
+      top: 0;
+      z-index: 60;
       backdrop-filter: blur(16px);
       background: rgba(255,255,255,0.85);
       border-bottom: 1px solid rgba(13,10,124,0.06);
     }
 
     .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 70px;
       position: relative;
     }
 
     .brand {
-      display: flex; align-items: center; gap: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .brand-mark {
-      width: 46px; height: 46px; border-radius: 14px; padding: 5px;
-      background: linear-gradient(135deg,rgba(13,10,124,0.97),rgba(34,28,146,0.97));
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      padding: 5px;
+      background: linear-gradient(135deg, rgba(13,10,124,0.97), rgba(34,28,146,0.97));
       box-shadow: 0 8px 20px rgba(13,10,124,0.20);
-      display: grid; place-items: center; overflow: hidden;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
     }
 
-    .brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
     .brand-title {
-      font-size: 1.15rem; font-weight: 900; color: var(--navy);
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--navy);
       letter-spacing: -0.02em;
     }
 
     .nav-links {
-      display: flex; align-items: center; gap: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .nav-links a {
-      padding: 9px 14px; border-radius: 999px; font-weight: 800;
-      font-size: 0.92rem; color: var(--navy);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--navy);
     }
 
     .nav-links a:hover { background: rgba(13,10,124,0.05); }
 
     .menu-toggle {
-      display: none; width: 44px; height: 44px; border: var(--border);
-      border-radius: 14px; background: white; color: var(--navy);
-      font-size: 1.2rem; font-weight: 900; cursor: pointer;
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: var(--border);
+      border-radius: 14px;
+      background: white;
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 900;
+      cursor: pointer;
       box-shadow: var(--shadow);
     }
 
     /* ── BUTTONS ── */
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      border: none; border-radius: 999px; padding: 16px 28px;
-      font-size: 1rem; font-weight: 900; cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: none;
+      border-radius: 999px;
+      padding: 16px 28px;
+      font-size: 1rem;
+      font-weight: 900;
+      cursor: pointer;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
-      text-align: center; line-height: 1.2;
+      text-align: center;
+      line-height: 1.2;
     }
 
     .btn:hover { transform: translateY(-2px); }
@@ -125,12 +163,15 @@
     }
 
     .btn-ghost {
-      color: var(--navy); background: white; border: var(--border);
+      color: var(--navy);
+      background: white;
+      border: var(--border);
       box-shadow: var(--shadow);
     }
 
     .btn-sm {
-      padding: 12px 20px; font-size: 0.92rem;
+      padding: 12px 20px;
+      font-size: 0.92rem;
     }
 
     /* ── HERO ── */
@@ -140,54 +181,70 @@
     }
 
     .hero-inner {
-      max-width: 820px; margin: 0 auto;
+      max-width: 820px;
+      margin: 0 auto;
     }
 
     .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 8px 16px; border-radius: 999px;
-      background: white; border: var(--border); box-shadow: var(--shadow);
-      font-weight: 800; font-size: 0.88rem; color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: white;
+      border: var(--border);
+      box-shadow: var(--shadow);
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: var(--navy);
       margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-      line-height: 1.05; letter-spacing: -0.04em; color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--navy);
       margin-bottom: 18px;
     }
 
     .hero h1 .highlight {
       background: linear-gradient(135deg, var(--orange), var(--orange-2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .hero-lead {
       font-size: clamp(1rem, 1.6vw, 1.14rem);
-      line-height: 1.8; color: var(--muted); max-width: 640px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 640px;
       margin: 0 auto 24px;
     }
 
     .hero-actions {
-      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
     }
 
-    /* ── STUDENT SHOWCASE ── */
+    /* ── STUDENT STORIES SHOWCASE ── */
     .student-showcase {
       padding-top: 8px;
-      padding-bottom: 10px;
+      padding-bottom: 18px;
     }
 
     .showcase-shell {
       position: relative;
       overflow: hidden;
-      border-radius: 32px;
+      border-radius: 34px;
       padding: 34px 26px 28px;
       background:
-        radial-gradient(circle at top right, rgba(242,106,46,0.18), transparent 22%),
-        radial-gradient(circle at bottom left, rgba(37,211,102,0.12), transparent 20%),
-        linear-gradient(135deg, #0b0a3d, #17138f 58%, #0d0a7c 100%);
+        radial-gradient(circle at top right, rgba(242,106,46,0.14), transparent 22%),
+        radial-gradient(circle at bottom left, rgba(37,211,102,0.10), transparent 20%),
+        linear-gradient(135deg, #100a5e 0%, #1d1499 58%, #120c78 100%);
       box-shadow: 0 28px 56px rgba(13,10,124,0.22);
       color: white;
     }
@@ -195,8 +252,8 @@
     .showcase-shell::before {
       content: "";
       position: absolute;
-      top: -60px;
-      left: -60px;
+      top: -62px;
+      left: -62px;
       width: 180px;
       height: 180px;
       border-radius: 999px;
@@ -221,7 +278,7 @@
       z-index: 1;
       text-align: center;
       max-width: 760px;
-      margin: 0 auto 24px;
+      margin: 0 auto 26px;
     }
 
     .showcase-kicker {
@@ -236,10 +293,11 @@
       font-size: 0.84rem;
       font-weight: 900;
       color: #fff2d2;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
     }
 
     .showcase-head h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-size: clamp(1.9rem, 3vw, 2.75rem);
       line-height: 1.08;
       margin-bottom: 10px;
       color: white;
@@ -250,76 +308,186 @@
       color: rgba(255,255,255,0.82);
       line-height: 1.75;
       font-size: 1rem;
+      max-width: 620px;
+      margin: 0 auto;
     }
 
     .showcase-grid {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      align-items: stretch;
     }
 
-    .project-card {
+    .story-card {
+      --gif-rotate: -1.6deg;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 26px;
       overflow: hidden;
       backdrop-filter: blur(8px);
       box-shadow: 0 16px 34px rgba(0,0,0,0.16);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
 
-    .project-card:hover {
+    .story-card:nth-child(2) { --gif-rotate: 1.8deg; }
+    .story-card:nth-child(3) { --gif-rotate: -0.9deg; }
+
+    .story-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 22px 42px rgba(0,0,0,0.22);
+      border-color: rgba(255,255,255,0.18);
     }
 
-    .project-media {
+    .story-visual {
       position: relative;
-      aspect-ratio: 16 / 10;
-      background: #06061f;
+      min-height: 250px;
+      padding: 16px 16px 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)),
+        radial-gradient(circle at 82% 82%, rgba(124,224,143,0.10), transparent 22%);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       overflow: hidden;
     }
 
-    .project-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .story-stage {
+      position: relative;
+      min-height: 234px;
+      isolation: isolate;
     }
 
-    .project-badge {
+    .story-stage::before {
+      content: "";
       position: absolute;
-      top: 12px;
-      left: 12px;
+      left: 10%;
+      top: 14%;
+      width: 76%;
+      height: 66%;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 68%);
+      filter: blur(12px);
+      z-index: 0;
+    }
+
+    .story-stage::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      bottom: 18px;
+      width: 116px;
+      height: 116px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(124,224,143,0.18), rgba(255,255,255,0));
+      transform: rotate(14deg);
+      z-index: 0;
+    }
+
+    .story-gif-card {
+      position: absolute;
+      top: 18px;
+      left: 8px;
+      width: 76%;
+      max-width: 285px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #ffffff, #f5f8ff);
+      border: 1px solid rgba(255,255,255,0.88);
+      box-shadow:
+        0 22px 48px rgba(13,10,124,0.20),
+        inset 0 0 0 1px rgba(13,10,124,0.04);
+      transform: rotate(var(--gif-rotate));
+      z-index: 1;
+      transition: transform 0.25s ease;
+    }
+
+    .story-gif-card img {
+      width: 100%;
+      height: 176px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .story-portrait {
+      position: absolute;
+      right: 4px;
+      bottom: 0;
+      width: 42%;
+      max-width: 158px;
+      z-index: 2;
+      filter: drop-shadow(0 18px 26px rgba(13,10,124,0.22));
+      transition: transform 0.25s ease;
+    }
+
+    .story-card:hover .story-gif-card {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .story-card:hover .story-portrait {
+      transform: translateY(-3px);
+    }
+
+    .story-content {
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .story-mini-tag {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 7px 12px;
+      gap: 8px;
+      align-self: flex-start;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(12,10,70,0.78);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: white;
-      font-size: 0.76rem;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff3cd;
+      font-size: 0.78rem;
       font-weight: 900;
-      letter-spacing: 0.01em;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
     }
 
-    .project-meta {
-      padding: 18px 16px 18px;
-    }
-
-    .project-title {
-      font-size: 1.02rem;
-      font-weight: 900;
-      margin-bottom: 6px;
+    .story-quote {
+      font-size: clamp(1.5rem, 2.1vw, 2.05rem);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
       color: white;
+      font-weight: 900;
+      max-width: 11ch;
+      min-height: 3.1em;
     }
 
-    .project-desc {
-      font-size: 0.91rem;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.78);
+    .story-project {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+      min-height: 3.1em;
+    }
+
+    .story-footer {
+      margin-top: auto;
+      padding-top: 4px;
+    }
+
+    .story-name {
+      font-size: 1.04rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .story-age {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.80);
     }
 
     .showcase-note {
@@ -336,64 +504,97 @@
     section { padding: 36px 0; }
 
     .section-head {
-      max-width: 700px; margin: 0 auto 28px; text-align: center;
+      max-width: 700px;
+      margin: 0 auto 28px;
+      text-align: center;
     }
 
     .section-head h2 {
       font-size: clamp(1.8rem, 3vw, 2.7rem);
-      line-height: 1.05; letter-spacing: -0.03em; color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--navy);
       margin-bottom: 12px;
     }
 
     .section-head p {
-      font-size: 1.02rem; line-height: 1.75; color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--muted);
     }
 
     /* ── PROBLEM / STATS STRIP ── */
     .problem-band {
       background: linear-gradient(135deg, var(--navy-deep), var(--navy-2));
-      border-radius: 32px; padding: 36px 32px; color: white;
-      position: relative; overflow: hidden;
+      border-radius: 32px;
+      padding: 36px 32px;
+      color: white;
+      position: relative;
+      overflow: hidden;
       box-shadow: 0 28px 56px rgba(8,6,64,0.28);
     }
 
     .problem-band::before {
-      content: ""; position: absolute; right: -80px; top: -80px;
-      width: 220px; height: 220px; border-radius: 999px;
-      background: rgba(242,106,46,0.15); pointer-events: none;
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      background: rgba(242,106,46,0.15);
+      pointer-events: none;
     }
 
     .problem-band::after {
-      content: ""; position: absolute; left: -60px; bottom: -60px;
-      width: 180px; height: 180px; border-radius: 999px;
-      background: rgba(37,211,102,0.12); pointer-events: none;
+      content: "";
+      position: absolute;
+      left: -60px;
+      bottom: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: rgba(37,211,102,0.12);
+      pointer-events: none;
     }
 
     .problem-band h2 {
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
       font-size: clamp(1.7rem, 3vw, 2.4rem);
-      line-height: 1.1; margin-bottom: 10px;
+      line-height: 1.1;
+      margin-bottom: 10px;
     }
 
     .problem-band > p {
-      position: relative; z-index: 1;
-      line-height: 1.75; color: rgba(255,255,255,0.80);
-      max-width: 640px; margin-bottom: 28px; font-size: 1.02rem;
+      position: relative;
+      z-index: 1;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.80);
+      max-width: 640px;
+      margin-bottom: 28px;
+      font-size: 1.02rem;
     }
 
     .proof-grid {
-      position: relative; z-index: 1;
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
 
     .proof-card {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 22px; padding: 22px 20px;
+      border-radius: 22px;
+      padding: 22px 20px;
     }
 
     .proof-card .num {
-      font-size: 1.6rem; font-weight: 900; line-height: 1;
+      font-size: 1.6rem;
+      font-weight: 900;
+      line-height: 1;
       margin-bottom: 8px;
     }
 
@@ -403,79 +604,127 @@
     .proof-card .num.sky-t { color: #8fe7ff; }
 
     .proof-card p {
-      margin: 0; line-height: 1.6; color: rgba(255,255,255,0.85);
+      margin: 0;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
       font-size: 0.94rem;
     }
 
     .proof-card .source {
-      display: inline-block; margin-top: 6px; font-size: 0.78rem;
-      color: rgba(255,255,255,0.45); font-weight: 700;
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 700;
     }
 
     /* ── ADVANTAGES ── */
     .adv-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .adv-card {
-      background: white; border: var(--border); border-radius: var(--radius);
-      padding: 26px 22px; box-shadow: var(--shadow);
-      position: relative; overflow: hidden;
+      background: white;
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
     }
 
     .adv-card::after {
-      content: ""; position: absolute; top: -30px; right: -30px;
-      width: 100px; height: 100px; border-radius: 999px;
-      background: rgba(124,224,143,0.12); pointer-events: none;
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 999px;
+      background: rgba(124,224,143,0.12);
+      pointer-events: none;
     }
 
     .adv-icon {
-      width: 56px; height: 56px; border-radius: 16px;
-      display: grid; place-items: center; margin-bottom: 16px;
-      font-size: 26px; position: relative; z-index: 1;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      font-size: 26px;
+      position: relative;
+      z-index: 1;
     }
 
     .adv-card h3 {
-      position: relative; z-index: 1;
-      font-size: 1.1rem; margin-bottom: 8px; color: var(--navy);
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--navy);
     }
 
     .adv-card p {
-      position: relative; z-index: 1;
-      margin: 0; line-height: 1.7; font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      line-height: 1.7;
+      font-size: 0.95rem;
     }
 
     /* ── TRUST STRIP ── */
     .trust-strip {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
     .trust-item {
-      background: white; border: var(--border); border-radius: 20px;
-      padding: 20px 16px; box-shadow: var(--shadow); text-align: center;
+      background: white;
+      border: var(--border);
+      border-radius: 20px;
+      padding: 20px 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
     .trust-item .emoji {
-      font-size: 28px; margin-bottom: 8px;
+      font-size: 28px;
+      margin-bottom: 8px;
     }
 
     .trust-item strong {
-      display: block; color: var(--navy); font-size: 1.08rem; margin-bottom: 4px;
+      display: block;
+      color: var(--navy);
+      font-size: 1.08rem;
+      margin-bottom: 4px;
     }
 
     .trust-item span {
-      font-size: 0.86rem; color: var(--muted); line-height: 1.5; font-weight: 600;
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.5;
+      font-weight: 600;
     }
 
     /* ── COURSES ── */
     .course-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
 
     .course-card {
-      background: white; border: var(--border); border-radius: 30px;
-      padding: 28px 24px; box-shadow: var(--shadow);
-      position: relative; overflow: hidden;
+      background: white;
+      border: var(--border);
+      border-radius: 30px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
     }
 
     .course-card.featured {
@@ -484,73 +733,121 @@
     }
 
     .course-card::after {
-      content: ""; position: absolute; top: -30px; right: -30px;
-      width: 110px; height: 110px; border-radius: 999px;
-      background: rgba(13,10,124,0.04); pointer-events: none;
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      background: rgba(13,10,124,0.04);
+      pointer-events: none;
     }
 
     .course-pill {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 8px 14px; border-radius: 999px; font-size: 0.82rem;
-      font-weight: 900; color: white; background: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      color: white;
+      background: var(--navy);
     }
 
     .course-card h3 {
-      position: relative; z-index: 1;
-      margin: 14px 0 4px; font-size: 1.55rem; color: var(--navy);
+      position: relative;
+      z-index: 1;
+      margin: 14px 0 4px;
+      font-size: 1.55rem;
+      color: var(--navy);
     }
 
     .course-age {
-      position: relative; z-index: 1;
-      font-weight: 800; color: var(--muted); margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+      font-weight: 800;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
     .course-card > p {
-      position: relative; z-index: 1;
-      line-height: 1.72; margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.72;
+      margin-bottom: 16px;
     }
 
     .course-card ul {
-      position: relative; z-index: 1;
-      list-style: none; padding: 0; display: grid; gap: 10px;
+      position: relative;
+      z-index: 1;
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 10px;
       margin-bottom: 20px;
     }
 
     .course-card li {
-      display: flex; align-items: flex-start; gap: 10px;
-      background: rgba(255,255,255,0.75); border: var(--border);
-      border-radius: 16px; padding: 12px 14px; line-height: 1.55;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(255,255,255,0.75);
+      border: var(--border);
+      border-radius: 16px;
+      padding: 12px 14px;
+      line-height: 1.55;
       font-size: 0.94rem;
     }
 
     .course-card li .check {
-      flex: 0 0 auto; width: 24px; height: 24px; border-radius: 8px;
-      background: var(--mint); display: grid; place-items: center;
-      font-size: 13px; font-weight: 900; color: var(--navy); margin-top: 1px;
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--mint);
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-top: 1px;
     }
 
     .course-cta {
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
     }
 
     /* ── COMPARE STRIP ── */
     .compare-table {
-      background: white; border: var(--border); border-radius: 28px;
-      padding: 28px 24px; box-shadow: var(--shadow); overflow-x: auto;
+      background: white;
+      border: var(--border);
+      border-radius: 28px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      overflow-x: auto;
     }
 
     .compare-table table {
-      width: 100%; border-collapse: collapse; font-size: 0.95rem;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
     }
 
     .compare-table th {
-      text-align: left; padding: 12px 14px; font-weight: 900;
-      color: var(--navy); border-bottom: 2px solid rgba(13,10,124,0.08);
+      text-align: left;
+      padding: 12px 14px;
+      font-weight: 900;
+      color: var(--navy);
+      border-bottom: 2px solid rgba(13,10,124,0.08);
       white-space: nowrap;
     }
 
     .compare-table td {
-      padding: 12px 14px; border-bottom: 1px solid rgba(13,10,124,0.05);
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(13,10,124,0.05);
       line-height: 1.5;
     }
 
@@ -562,66 +859,105 @@
     /* ── PYTHON SECTION ── */
     .python-why {
       background: linear-gradient(135deg, var(--navy), #2519bf);
-      border-radius: 30px; padding: 32px 28px; color: white;
+      border-radius: 30px;
+      padding: 32px 28px;
+      color: white;
       box-shadow: 0 24px 50px rgba(13,10,124,0.22);
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
 
     .python-why::before {
-      content: ""; position: absolute; right: -70px; top: -70px;
-      width: 200px; height: 200px; border-radius: 999px;
-      background: rgba(124,224,143,0.15); pointer-events: none;
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      width: 200px;
+      height: 200px;
+      border-radius: 999px;
+      background: rgba(124,224,143,0.15);
+      pointer-events: none;
     }
 
     .python-why-grid {
-      position: relative; z-index: 1;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
       align-items: center;
     }
 
     .python-why h2 {
       font-size: clamp(1.7rem, 3vw, 2.3rem);
-      line-height: 1.1; margin-bottom: 12px;
+      line-height: 1.1;
+      margin-bottom: 12px;
     }
 
     .python-why .sub {
-      line-height: 1.75; color: rgba(255,255,255,0.80);
+      line-height: 1.75;
+      color: rgba(255,255,255,0.80);
       margin-bottom: 20px;
     }
 
     .python-facts {
-      display: grid; gap: 12px;
+      display: grid;
+      gap: 12px;
     }
 
     .py-fact {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 18px; padding: 16px 18px; line-height: 1.65;
-      font-size: 0.95rem; color: rgba(255,255,255,0.92);
+      border-radius: 18px;
+      padding: 16px 18px;
+      line-height: 1.65;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.92);
     }
 
     .py-fact strong { color: white; }
 
     /* ── JOURNEY ── */
     .journey-steps {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
 
     .j-step {
-      background: white; border: var(--border); border-radius: var(--radius);
-      padding: 24px 20px; box-shadow: var(--shadow); text-align: center;
+      background: white;
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
     .j-num {
-      width: 48px; height: 48px; border-radius: 14px; display: grid;
-      place-items: center; margin: 0 auto 14px;
-      background: var(--navy); color: white; font-weight: 900;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 14px;
+      background: var(--navy);
+      color: white;
+      font-weight: 900;
       font-size: 1.1rem;
       box-shadow: 0 10px 18px rgba(13,10,124,0.16);
     }
 
-    .j-step h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 6px; }
-    .j-step p { font-size: 0.92rem; line-height: 1.6; color: var(--muted); }
+    .j-step h3 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .j-step p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
 
     /* ── CTA ── */
     .final-cta {
@@ -629,44 +965,72 @@
         radial-gradient(circle at top right, rgba(37,211,102,0.12), transparent 22%),
         radial-gradient(circle at bottom left, rgba(242,106,46,0.10), transparent 20%),
         white;
-      border: var(--border); border-radius: 34px;
-      padding: 40px 32px; box-shadow: var(--shadow); text-align: center;
+      border: var(--border);
+      border-radius: 34px;
+      padding: 40px 32px;
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
     .final-cta h2 {
-      color: var(--navy); font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.08; margin-bottom: 12px;
+      color: var(--navy);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.08;
+      margin-bottom: 12px;
     }
 
     .final-cta p {
-      max-width: 600px; margin: 0 auto 24px;
-      line-height: 1.75; color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 24px;
+      line-height: 1.75;
+      color: var(--muted);
     }
 
     .final-cta .cta-row {
-      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
     }
 
     .urgency-note {
-      display: inline-flex; align-items: center; gap: 8px;
-      margin-top: 16px; padding: 10px 18px; border-radius: 999px;
-      background: #fff5ec; border: 2px solid rgba(242,106,46,0.12);
-      font-size: 0.88rem; font-weight: 800; color: var(--orange);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #fff5ec;
+      border: 2px solid rgba(242,106,46,0.12);
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--orange);
     }
 
     /* ── FOOTER ── */
     footer {
-      padding: 24px 0 90px; text-align: center;
-      color: var(--muted); font-weight: 700; font-size: 0.88rem;
+      padding: 24px 0 90px;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.88rem;
     }
 
     /* ── WHATSAPP FLOAT ── */
     .wa-float {
-      position: fixed; right: 16px; bottom: 16px; z-index: 70;
-      display: flex; align-items: center; gap: 10px;
-      padding: 14px 22px; border-radius: 999px;
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 70;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
       background: linear-gradient(135deg, #25D366, #1da851);
-      color: white; font-weight: 900; font-size: 0.95rem;
+      color: white;
+      font-weight: 900;
+      font-size: 0.95rem;
       box-shadow: 0 16px 36px rgba(37,211,102,0.35);
       border: 3px solid rgba(255,255,255,0.9);
       transition: transform 0.18s ease;
@@ -676,7 +1040,8 @@
     .wa-float:hover { transform: translateY(-3px) scale(1.03); }
 
     .wa-float .wa-icon {
-      width: 28px; height: 28px;
+      width: 28px;
+      height: 28px;
     }
 
     @keyframes pulse-wa {
@@ -689,17 +1054,24 @@
       .menu-toggle { display: inline-grid; place-items: center; }
 
       .nav-links {
-        position: absolute; left: 14px; right: 14px; top: calc(100% + 8px);
-        background: rgba(255,255,255,0.98); border: var(--border);
-        border-radius: 20px; box-shadow: var(--shadow-strong);
-        padding: 10px; display: none; flex-direction: column;
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: calc(100% + 8px);
+        background: rgba(255,255,255,0.98);
+        border: var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow-strong);
+        padding: 10px;
+        display: none;
+        flex-direction: column;
       }
 
       .nav-links.open { display: flex; }
       .nav-links a { padding: 13px 16px; border-radius: 14px; }
       .nav-links .btn { width: 100%; }
 
-      .showcase-grid { grid-template-columns: 1fr; }
+      .showcase-grid { grid-template-columns: repeat(2, 1fr); }
       .proof-grid { grid-template-columns: 1fr 1fr; }
       .adv-grid { grid-template-columns: 1fr 1fr; }
       .trust-strip { grid-template-columns: repeat(2, 1fr); }
@@ -719,8 +1091,47 @@
         border-radius: 24px;
       }
 
-      .project-meta {
-        padding: 16px 14px 16px;
+      .showcase-grid { grid-template-columns: 1fr; }
+
+      .story-visual {
+        min-height: 234px;
+        padding: 14px 14px 0;
+      }
+
+      .story-stage {
+        min-height: 220px;
+      }
+
+      .story-gif-card {
+        width: 74%;
+        max-width: 260px;
+        left: 6px;
+        border-radius: 20px;
+      }
+
+      .story-gif-card img {
+        height: 162px;
+      }
+
+      .story-portrait {
+        width: 43%;
+        max-width: 145px;
+        right: 0;
+      }
+
+      .story-content {
+        padding: 16px 16px 18px;
+      }
+
+      .story-quote {
+        font-size: clamp(1.55rem, 8vw, 2.15rem);
+        min-height: auto;
+        max-width: 100%;
+      }
+
+      .story-project {
+        min-height: auto;
+        font-size: 0.95rem;
       }
 
       .proof-grid { grid-template-columns: 1fr; }
@@ -733,15 +1144,21 @@
       .final-cta { padding: 28px 20px; border-radius: 26px; }
 
       .wa-float {
-        right: 10px; bottom: 10px;
-        padding: 12px 18px; font-size: 0.88rem;
+        right: 10px;
+        bottom: 10px;
+        padding: 12px 18px;
+        font-size: 0.88rem;
       }
 
       .wa-float .wa-text { display: none; }
 
       .wa-float {
-        width: 58px; height: 58px; padding: 0;
-        display: grid; place-items: center; border-radius: 999px;
+        width: 58px;
+        height: 58px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
       }
 
       footer { padding-bottom: 88px; }
@@ -786,71 +1203,89 @@
 
           <div class="hero-actions">
             <a class="btn btn-whatsapp" href="https://wa.me/601153238181?text=Hi%20codeSmart%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20Python%20courses." target="_blank" rel="noopener">💬 WhatsApp to Enquire</a>
-            <a class="btn btn-ghost" href="#courses">View Courses</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ STUDENT SHOWCASE ═══ -->
+    <!-- ═══ STUDENT STORIES ═══ -->
     <section class="student-showcase">
       <div class="container">
         <div class="showcase-shell">
           <div class="showcase-head">
-            <div class="showcase-kicker">🚀 Student-built projects</div>
-            <h2>What our students built after taking the course.</h2>
+            <div class="showcase-kicker">⭐ Student stories</div>
+            <h2>What our students say after building real projects.</h2>
             <p>
-              "They don’t just learn code. They build things they’re proud of”
+              Real learners. Real projects. Real confidence built through coding.
             </p>
           </div>
 
           <div class="showcase-grid">
 
-            <article class="project-card">
-              <div class="project-media">
-                <span class="project-badge">🧩 Beginner Logic</span>
-                <img src="assets/gif1.gif" alt="Student-built Python beginner project" />
+            <article class="story-card">
+              <div class="story-visual">
+                <div class="story-stage">
+                  <div class="story-gif-card">
+                    <img src="assets/gif3.gif" alt="Bryan's Python Flappy Bird project" />
+                  </div>
+                  <img class="story-portrait" src="assets/person1.png" alt="Bryan Chia portrait" />
+                </div>
               </div>
-              <div class="project-meta">
-                <div class="project-title">First interactive Python program</div>
-                <!-- <div class="project-desc">
-                  A beginner-friendly project that turns coding concepts into something
-                  visual, rewarding, and easy to understand.
-                </div> -->
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-media">
-                <span class="project-badge">🎮 Game Project</span>
-                <img src="assets/gif3.gif" alt="Student-built Flappy Bird style Python game" />
-              </div>
-              <div class="project-meta">
-                <div class="project-title">Arcade-style Python game</div>
-                <!-- <div class="project-desc">
-                  Students learn logic, collisions, scoring, and game loops by building
-                  something fun they can actually play.
-                </div> -->
+              <div class="story-content">
+                <div class="story-mini-tag">⭐ Student story</div>
+                <div class="story-quote">“I discovered that I like coding a lot”</div>
+                <div class="story-project">Built Flappy Bird Clone in Python</div>
+                <div class="story-footer">
+                  <div class="story-name">Bryan Chia</div>
+                  <div class="story-age">11-year-old</div>
+                </div>
               </div>
             </article>
 
-            <article class="project-card">
-              <div class="project-media">
-                <span class="project-badge">🌌 Creative Build</span>
-                <img src="assets/gif2.gif" alt="Student-built Python animation or game" />
+            <article class="story-card">
+              <div class="story-visual">
+                <div class="story-stage">
+                  <div class="story-gif-card">
+                    <img src="assets/gif2.gif" alt="Christine's Python game project" />
+                  </div>
+                  <img class="story-portrait" src="assets/person2.png" alt="Christine Yee portrait" />
+                </div>
               </div>
-              <div class="project-meta">
-                <div class="project-title">Creative animation or mini game</div>
-                <!-- <div class="project-desc">
-                  Students combine movement, variables, and problem-solving to create
-                  projects that feel impressive even at an early stage.
-                </div> -->
+              <div class="story-content">
+                <div class="story-mini-tag">🚀 Fast progress</div>
+                <div class="story-quote">“I built a game in just 10 lessons”</div>
+                <div class="story-project">Built Space Click Game in Python</div>
+                <div class="story-footer">
+                  <div class="story-name">Christine Yee</div>
+                  <div class="story-age">12-year-old</div>
+                </div>
               </div>
             </article>
+
+            <article class="story-card">
+              <div class="story-visual">
+                <div class="story-stage">
+                  <div class="story-gif-card">
+                    <img src="assets/gif1.gif" alt="Jia Jun's intro coding project" />
+                  </div>
+                  <img class="story-portrait" src="assets/person3.png" alt="Jia Jun portrait" />
+                </div>
+              </div>
+              <div class="story-content">
+                <div class="story-mini-tag">🧠 Learning mindset</div>
+                <div class="story-quote">“Solving coding challenge is fun”</div>
+                <div class="story-project">EduBlocks intro coding</div>
+                <div class="story-footer">
+                  <div class="story-name">Jia Jun</div>
+                  <div class="story-age">11-year-old</div>
+                </div>
+              </div>
+            </article>
+
           </div>
 
           <div class="showcase-note">
-            Real examples of what students can build during their learning journey.
+            Real student outcomes from actual lessons — not stock examples.
           </div>
         </div>
       </div>
@@ -1123,7 +1558,7 @@
 
   <!-- ═══ FLOATING WHATSAPP ═══ -->
   <a class="wa-float" href="https://wa.me/601153238181?text=Hi%20codeSmart%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20Python%20courses." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg class="wa-icon" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <svg class="wa-icon" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="wa-text">WhatsApp Us</span>
   </a>
 
